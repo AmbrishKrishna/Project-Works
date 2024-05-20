@@ -1,0 +1,2294 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="666" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="56">C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>2110_OCT 2021 FAULT REPORT.xlsx
+Query=`OCTOBER 2021$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="F1" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="F2" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="F3" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="F4" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="F5" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="F6" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="F7" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="F8" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="F9" size="262" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="F10" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="F11" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="F12" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="906" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace(Replace([Reporting Time], '.', ':'),';', ':')&#xA;" field="Reporting Time" size="255" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Reporting Time = Replace(Replace([Reporting Time], '.', ':'),';', ':')
+
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="S/N" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Date" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Counter Staff Name" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Reporting Time" size="255" source="Formula: Replace(Replace([Reporting Time], '.', ':'),';', ':')&#xA;" type="V_String" />
+            <Field name="Department" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Block" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Level" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Feedback" size="262" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Informed to?" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Problem Report (PR) Number" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Remarks" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings>
+        <Position x="834" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">""</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">False</Value>
+          <Value name="Check Box (122)">True</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output26">
+          <RecordInfo>
+            <Field name="S/N" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Date" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Counter Staff Name" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Reporting Time" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Department" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Block" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Level" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Feedback" size="262" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Informed to?" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Problem Report (PR) Number" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Remarks" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1002" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace(Replace([Reporting Time], 'AM', ':00'), 'PM', ':00')&#xA;" field="Reporting Time" size="255" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Reporting Time = Replace(Replace([Reporting Time], 'AM', ':00'), 'PM', ':00')
+
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="S/N" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Date" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Counter Staff Name" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Reporting Time" size="255" source="Formula: Replace(Replace([Reporting Time], 'AM', ':00'), 'PM', ':00')&#xA;" type="V_String" />
+            <Field name="Department" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Block" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Level" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Feedback" size="262" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Informed to?" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Problem Report (PR) Number" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Remarks" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>2111_NOV 2021 FAULT REPORT.xlsx
+Query=`NOVEMBER 2021$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="S/N" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="Double" />
+            <Field name="Date" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="Date" />
+            <Field name="Counter Staff Name" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="Double" />
+            <Field name="Reporting Time" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Requestor ID" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Department" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Block" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Level" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Feedback" size="938" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_WString" />
+            <Field name="Category" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Assigned to" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Completed?&#xA; (Y / N)" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Actual Issue" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Action Taken" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Remarks" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="WI&#xA;person in charge" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Informed user?&#xA;" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="F19" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="Double" />
+            <Field name="F20" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="Double" />
+            <Field name="F21" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="Double" />
+            <Field name="F22" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="Double" />
+            <Field name="F23" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="Double" />
+            <Field name="F24" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="Double" />
+            <Field name="F25" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="198" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>2112_DEC 2021 FAULT REPORT.xlsx
+Query=`DECEMBER 2021$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="S/N" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="Double" />
+            <Field name="Date" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="Date" />
+            <Field name="Counter Staff Name" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="Double" />
+            <Field name="Reporting Time" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="V_String" />
+            <Field name="Requestor ID" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="V_String" />
+            <Field name="Department" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="V_String" />
+            <Field name="Block" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="V_String" />
+            <Field name="Level" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="V_String" />
+            <Field name="Feedback" size="401" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="V_String" />
+            <Field name="Category" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="V_String" />
+            <Field name="Assigned to" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="V_String" />
+            <Field name="Completed?&#xA;(Y / N)" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="V_String" />
+            <Field name="Actual Issue" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="V_String" />
+            <Field name="Action Taken" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="V_String" />
+            <Field name="Informed user?&#xA;" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="V_String" />
+            <Field name="F17" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="Double" />
+            <Field name="F18" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="Double" />
+            <Field name="F19" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="Double" />
+            <Field name="F20" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="Double" />
+            <Field name="F21" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="Double" />
+            <Field name="F22" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="342" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>2201_JAN 2022 FAULT REPORT.xlsx
+Query=`JANUARY 2022$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="S/N" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="Double" />
+            <Field name="Date" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="Date" />
+            <Field name="Counter Staff Name" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="Double" />
+            <Field name="Reporting Time" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="V_String" />
+            <Field name="Requestor ID" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="V_String" />
+            <Field name="Department" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="V_String" />
+            <Field name="Block" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="V_String" />
+            <Field name="Level" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="V_String" />
+            <Field name="Feedback" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="V_String" />
+            <Field name="Category" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="V_String" />
+            <Field name="Assigned to" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="V_String" />
+            <Field name="Completed?&#xA;(Y / N)" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="V_String" />
+            <Field name="Actual Issue" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="V_String" />
+            <Field name="Action Taken" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="V_String" />
+            <Field name="Completion &#xA;Date" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="V_String" />
+            <Field name="Informed user?&#xA;" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="V_String" />
+            <Field name="F18" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="V_String" />
+            <Field name="F19" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="Double" />
+            <Field name="F20" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="Double" />
+            <Field name="F21" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="Double" />
+            <Field name="F22" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="Double" />
+            <Field name="F23" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2201_JAN 2022 FAULT REPORT.xlsx|||`JANUARY 2022$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>2202_FEB 2022 FAULT REPORT.xlsx
+Query=`FEBRUARY 2022$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="S/N" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="Double" />
+            <Field name="Date" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="Date" />
+            <Field name="Counter Staff Name" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="Double" />
+            <Field name="Reporting Time" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="V_String" />
+            <Field name="Requestor ID" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="V_String" />
+            <Field name="Department" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="V_String" />
+            <Field name="Block" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="V_String" />
+            <Field name="Level" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="V_String" />
+            <Field name="Location" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="V_String" />
+            <Field name="Feedback" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="V_String" />
+            <Field name="Category" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="V_String" />
+            <Field name="Assigned to" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="V_String" />
+            <Field name="Completed?&#xA;(Y / N)" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="V_String" />
+            <Field name="Actual Issue" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="V_String" />
+            <Field name="Action Taken" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="V_String" />
+            <Field name="Completion &#xA;Date" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="Date" />
+            <Field name="Informed user?&#xA;" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="V_String" />
+            <Field name="F19" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="Double" />
+            <Field name="F20" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="Double" />
+            <Field name="F21" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="Double" />
+            <Field name="F22" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="Double" />
+            <Field name="F23" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="Double" />
+            <Field name="F24" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2202_FEB 2022 FAULT REPORT.xlsx|||`FEBRUARY 2022$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="210" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>2203_MAR 2022 FAULT REPORT.xlsx
+Query=`MARCH 2022$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="S/N" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="Double" />
+            <Field name="Date" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="Date" />
+            <Field name="Counter Staff Name" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="Double" />
+            <Field name="Reporting Time" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="V_String" />
+            <Field name="Requestor ID" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="V_String" />
+            <Field name="Department" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="V_String" />
+            <Field name="Block" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="V_String" />
+            <Field name="Level" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="V_String" />
+            <Field name="Location" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="V_String" />
+            <Field name="Feedback" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="V_WString" />
+            <Field name="Category" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="V_String" />
+            <Field name="Assigned to" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="V_String" />
+            <Field name="Completed?&#xA;(Y / N)" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="V_String" />
+            <Field name="Actual Issue" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="V_String" />
+            <Field name="Action Taken" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="V_String" />
+            <Field name="Completion &#xA;Date" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="V_String" />
+            <Field name="Informed user?&#xA;" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="V_String" />
+            <Field name="F19" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="Double" />
+            <Field name="F20" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="Double" />
+            <Field name="F21" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="Double" />
+            <Field name="F22" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="Double" />
+            <Field name="F23" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2203_MAR 2022 FAULT REPORT.xlsx|||`MARCH 2022$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="342" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>2204_APR 2022 FAULT REPORT.xlsx
+Query=`APRIL 2022$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="S/N" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="Double" />
+            <Field name="Date" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="Date" />
+            <Field name="Counter Staff Name" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="Double" />
+            <Field name="Reporting Time" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="V_String" />
+            <Field name="Requestor ID" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="V_String" />
+            <Field name="Department" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="V_String" />
+            <Field name="Block" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="V_String" />
+            <Field name="Level" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="V_String" />
+            <Field name="Location" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="V_String" />
+            <Field name="Feedback" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="V_String" />
+            <Field name="Category" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="V_String" />
+            <Field name="Assigned to" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="V_String" />
+            <Field name="Completed?&#xA;(Y / N)" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="V_String" />
+            <Field name="Actual Issue" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="V_String" />
+            <Field name="Action Taken" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="V_String" />
+            <Field name="Completion &#xA;Date" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="V_String" />
+            <Field name="Informed user?&#xA;" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="V_String" />
+            <Field name="F19" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="Double" />
+            <Field name="F20" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="Double" />
+            <Field name="F21" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="Double" />
+            <Field name="F22" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="Double" />
+            <Field name="F23" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2204_APR 2022 FAULT REPORT.xlsx|||`APRIL 2022$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>2205_MAY 2022 FAULT REPORT.xlsx
+Query=`MAY 2022$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="S/N" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="Double" />
+            <Field name="Date" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="Date" />
+            <Field name="Counter Staff Name" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="Double" />
+            <Field name="Reporting Time" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="V_String" />
+            <Field name="Requestor ID" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="V_String" />
+            <Field name="Department" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="V_String" />
+            <Field name="Block" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="V_String" />
+            <Field name="Level" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="V_String" />
+            <Field name="Location" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="V_String" />
+            <Field name="Feedback" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="V_WString" />
+            <Field name="Category" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="V_String" />
+            <Field name="Assigned to" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="V_String" />
+            <Field name="Completed?&#xA;(Y / N)" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="V_String" />
+            <Field name="Actual Issue" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="V_String" />
+            <Field name="Action Taken" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="V_String" />
+            <Field name="Completion &#xA;Date" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="Date" />
+            <Field name="Informed user?&#xA;" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="V_String" />
+            <Field name="F19" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="Double" />
+            <Field name="F20" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="Double" />
+            <Field name="F21" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="Double" />
+            <Field name="F22" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="Double" />
+            <Field name="F23" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2205_MAY 2022 FAULT REPORT.xlsx|||`MAY 2022$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="210" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>2206_JUN 2022 FAULT REPORT.xlsx
+Query=`JUNE 2022$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="S/N" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="Double" />
+            <Field name="Date" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="Date" />
+            <Field name="Counter Staff Name" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="Double" />
+            <Field name="Reporting Time" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="V_String" />
+            <Field name="Requestor ID" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="V_String" />
+            <Field name="Department" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="V_String" />
+            <Field name="Block" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="V_String" />
+            <Field name="Level" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="V_String" />
+            <Field name="Location" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="V_String" />
+            <Field name="Feedback" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="V_String" />
+            <Field name="Category" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="V_String" />
+            <Field name="Assigned to" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="V_String" />
+            <Field name="Completed?&#xA;(Y / N)" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="V_String" />
+            <Field name="Actual Issue" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="V_String" />
+            <Field name="Action Taken" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="V_String" />
+            <Field name="Completion &#xA;Date" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="Date" />
+            <Field name="Informed user?&#xA;" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="V_String" />
+            <Field name="F19" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="Double" />
+            <Field name="F20" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="Double" />
+            <Field name="F21" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="Double" />
+            <Field name="F22" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="Double" />
+            <Field name="F23" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2206_JUN 2022 FAULT REPORT.xlsx|||`JUNE 2022$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="342" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>2207_JUL 2022 FAULT REPORT.xlsx
+Query=`JULY 2022$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="S/N" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="Double" />
+            <Field name="Date" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="Date" />
+            <Field name="Counter Staff Name" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="Double" />
+            <Field name="Reporting Time" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="V_String" />
+            <Field name="Requestor ID" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="V_String" />
+            <Field name="Department" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="V_String" />
+            <Field name="Block" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="V_String" />
+            <Field name="Level" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="V_String" />
+            <Field name="Location" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="V_String" />
+            <Field name="Feedback" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="V_WString" />
+            <Field name="Category" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="V_String" />
+            <Field name="Assigned to" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="V_String" />
+            <Field name="Completed?&#xA;(Y / N)" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="V_String" />
+            <Field name="Actual Issue" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="V_String" />
+            <Field name="Action Taken" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="V_String" />
+            <Field name="Completion &#xA;Date" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="Date" />
+            <Field name="Informed user?&#xA;" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="V_String" />
+            <Field name="F19" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="Double" />
+            <Field name="F20" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="Double" />
+            <Field name="F21" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="Double" />
+            <Field name="F22" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="Double" />
+            <Field name="F23" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2207_JUL 2022 FAULT REPORT.xlsx|||`JULY 2022$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>2208_AUG 2022 FAULT REPORT.xlsx
+Query=`AUGUST 2022$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="S/N" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="Double" />
+            <Field name="Date" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="Date" />
+            <Field name="F3" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="Double" />
+            <Field name="Counter Staff Name" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="V_String" />
+            <Field name="Reporting Time" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="V_String" />
+            <Field name="Requestor ID" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="V_String" />
+            <Field name="Department" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="V_String" />
+            <Field name="Block" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="V_String" />
+            <Field name="Level" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="V_String" />
+            <Field name="Location" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="V_String" />
+            <Field name="Feedback" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="V_WString" />
+            <Field name="Category" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="V_String" />
+            <Field name="Assigned to" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="V_String" />
+            <Field name="Completed?&#xA;(Y / N)" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="V_String" />
+            <Field name="Actual Issue" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="V_String" />
+            <Field name="Action Taken" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="V_String" />
+            <Field name="Completion &#xA;Date" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="V_String" />
+            <Field name="Informed user?&#xA;" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="V_String" />
+            <Field name="F20" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="Double" />
+            <Field name="F21" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="Double" />
+            <Field name="F22" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="Double" />
+            <Field name="F23" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="Double" />
+            <Field name="F24" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="Double" />
+            <Field name="F25" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="210" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>2209_SEP 2022 FAULT REPORT.xlsx
+Query=`SEPTEMBER 2022$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="S/N" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="Double" />
+            <Field name="Date" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="Date" />
+            <Field name="Counter Staff Name" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="Double" />
+            <Field name="Reporting Time" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="V_String" />
+            <Field name="Requestor ID" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="V_String" />
+            <Field name="Department" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="V_String" />
+            <Field name="Block" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="V_String" />
+            <Field name="Level" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="V_String" />
+            <Field name="Location" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="V_String" />
+            <Field name="Feedback" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="V_String" />
+            <Field name="Category" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="V_String" />
+            <Field name="Assigned to" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="V_String" />
+            <Field name="Completed?&#xA;(Y / N)" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="V_String" />
+            <Field name="Actual Issue" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="V_String" />
+            <Field name="Action Taken" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="V_String" />
+            <Field name="Completion &#xA;Date" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="Date" />
+            <Field name="Informed user?&#xA;" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="V_String" />
+            <Field name="F19" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="Double" />
+            <Field name="F20" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="Double" />
+            <Field name="F21" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="Double" />
+            <Field name="F22" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="Double" />
+            <Field name="F23" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2209_SEP 2022 FAULT REPORT.xlsx|||`SEPTEMBER 2022$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="90" y="822" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2210_OCT 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U997`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>2210_OCT 2022 FAULT REPORT_NEW.xlsx
+Query=`Sheet1$A7:U997`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Ref No." size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2210_OCT 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U997`" type="V_String" />
+            <Field name="Submission" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2210_OCT 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U997`" type="V_String" />
+            <Field name="Fault Category" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2210_OCT 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U997`" type="V_String" />
+            <Field name="Section" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2210_OCT 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U997`" type="V_String" />
+            <Field name="Zone" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2210_OCT 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U997`" type="V_String" />
+            <Field name="Location / Equipment Type" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2210_OCT 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U997`" type="V_String" />
+            <Field name="Model" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2210_OCT 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U997`" type="V_String" />
+            <Field name="Site Name" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2210_OCT 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U997`" type="V_String" />
+            <Field name="Category" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2210_OCT 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U997`" type="V_String" />
+            <Field name="Location / Equipment" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2210_OCT 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U997`" type="V_String" />
+            <Field name="Caption" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2210_OCT 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U997`" type="V_String" />
+            <Field name="Remark" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2210_OCT 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U997`" type="V_String" />
+            <Field name="Corrective Remark" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2210_OCT 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U997`" type="V_WString" />
+            <Field name="Call in Time" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2210_OCT 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U997`" type="V_String" />
+            <Field name="Follow Up" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2210_OCT 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U997`" type="V_String" />
+            <Field name="Completed" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2210_OCT 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U997`" type="V_WString" />
+            <Field name="Completed By" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2210_OCT 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U997`" type="V_String" />
+            <Field name="Completed On" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2210_OCT 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U997`" type="V_String" />
+            <Field name="Closed" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2210_OCT 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U997`" type="V_WString" />
+            <Field name="Closed By" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2210_OCT 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U997`" type="V_String" />
+            <Field name="Closed On" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2210_OCT 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U997`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="234" y="822" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2211_NOV 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U943`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>2211_NOV 2022 FAULT REPORT_NEW.xlsx
+Query=`Sheet1$A7:U943`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Ref No." size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2211_NOV 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U943`" type="V_String" />
+            <Field name="Submission" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2211_NOV 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U943`" type="V_String" />
+            <Field name="Fault Category" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2211_NOV 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U943`" type="V_String" />
+            <Field name="Section" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2211_NOV 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U943`" type="V_String" />
+            <Field name="Zone" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2211_NOV 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U943`" type="V_String" />
+            <Field name="Location / Equipment Type" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2211_NOV 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U943`" type="V_String" />
+            <Field name="Model" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2211_NOV 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U943`" type="V_String" />
+            <Field name="Site Name" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2211_NOV 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U943`" type="V_String" />
+            <Field name="Category" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2211_NOV 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U943`" type="V_String" />
+            <Field name="Location / Equipment" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2211_NOV 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U943`" type="V_String" />
+            <Field name="Caption" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2211_NOV 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U943`" type="V_String" />
+            <Field name="Remark" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2211_NOV 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U943`" type="V_WString" />
+            <Field name="Corrective Remark" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2211_NOV 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U943`" type="V_WString" />
+            <Field name="Call in Time" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2211_NOV 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U943`" type="V_String" />
+            <Field name="Follow Up" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2211_NOV 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U943`" type="V_String" />
+            <Field name="Completed" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2211_NOV 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U943`" type="V_WString" />
+            <Field name="Completed By" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2211_NOV 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U943`" type="V_String" />
+            <Field name="Completed On" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2211_NOV 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U943`" type="V_String" />
+            <Field name="Closed" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2211_NOV 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U943`" type="V_WString" />
+            <Field name="Closed By" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2211_NOV 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U943`" type="V_String" />
+            <Field name="Closed On" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2211_NOV 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U943`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="402" y="822" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2212_DEC 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A6:U511`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>2212_DEC 2022 FAULT REPORT_NEW.xlsx
+Query=`Sheet1$A6:U511`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Ref No." size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2212_DEC 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A6:U511`" type="V_String" />
+            <Field name="Submission" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2212_DEC 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A6:U511`" type="V_String" />
+            <Field name="Fault Category" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2212_DEC 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A6:U511`" type="V_String" />
+            <Field name="Section" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2212_DEC 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A6:U511`" type="V_String" />
+            <Field name="Zone" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2212_DEC 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A6:U511`" type="V_String" />
+            <Field name="Location / Equipment Type" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2212_DEC 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A6:U511`" type="V_String" />
+            <Field name="Model" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2212_DEC 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A6:U511`" type="V_String" />
+            <Field name="Site Name" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2212_DEC 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A6:U511`" type="V_String" />
+            <Field name="Category" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2212_DEC 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A6:U511`" type="V_String" />
+            <Field name="Location / Equipment" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2212_DEC 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A6:U511`" type="V_String" />
+            <Field name="Caption" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2212_DEC 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A6:U511`" type="V_String" />
+            <Field name="Remark" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2212_DEC 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A6:U511`" type="V_WString" />
+            <Field name="Corrective Remark" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2212_DEC 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A6:U511`" type="V_WString" />
+            <Field name="Call in Time" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2212_DEC 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A6:U511`" type="V_String" />
+            <Field name="Follow Up" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2212_DEC 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A6:U511`" type="V_String" />
+            <Field name="Completed" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2212_DEC 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A6:U511`" type="V_WString" />
+            <Field name="Completed By" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2212_DEC 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A6:U511`" type="V_String" />
+            <Field name="Completed On" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2212_DEC 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A6:U511`" type="V_String" />
+            <Field name="Closed" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2212_DEC 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A6:U511`" type="V_WString" />
+            <Field name="Closed By" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2212_DEC 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A6:U511`" type="V_String" />
+            <Field name="Closed On" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2212_DEC 2022 FAULT REPORT_NEW.xlsx|||`Sheet1$A6:U511`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="102" y="1002" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2301_JAN 2023 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U562`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>2301_JAN 2023 FAULT REPORT_NEW.xlsx
+Query=`Sheet1$A7:U562`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Ref No." size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2301_JAN 2023 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U562`" type="V_String" />
+            <Field name="Submission" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2301_JAN 2023 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U562`" type="V_String" />
+            <Field name="Fault Category" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2301_JAN 2023 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U562`" type="V_String" />
+            <Field name="Section" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2301_JAN 2023 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U562`" type="V_String" />
+            <Field name="Zone" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2301_JAN 2023 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U562`" type="V_String" />
+            <Field name="Location / Equipment Type" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2301_JAN 2023 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U562`" type="V_String" />
+            <Field name="Model" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2301_JAN 2023 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U562`" type="V_String" />
+            <Field name="Site Name" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2301_JAN 2023 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U562`" type="V_String" />
+            <Field name="Category" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2301_JAN 2023 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U562`" type="V_String" />
+            <Field name="Location / Equipment" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2301_JAN 2023 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U562`" type="V_String" />
+            <Field name="Caption" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2301_JAN 2023 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U562`" type="V_String" />
+            <Field name="Remark" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2301_JAN 2023 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U562`" type="V_String" />
+            <Field name="Corrective Remark" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2301_JAN 2023 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U562`" type="V_String" />
+            <Field name="Call in Time" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2301_JAN 2023 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U562`" type="V_String" />
+            <Field name="Follow Up" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2301_JAN 2023 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U562`" type="V_String" />
+            <Field name="Completed" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2301_JAN 2023 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U562`" type="V_WString" />
+            <Field name="Completed By" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2301_JAN 2023 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U562`" type="V_String" />
+            <Field name="Completed On" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2301_JAN 2023 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U562`" type="V_String" />
+            <Field name="Closed" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2301_JAN 2023 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U562`" type="V_WString" />
+            <Field name="Closed By" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2301_JAN 2023 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U562`" type="V_String" />
+            <Field name="Closed On" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2301_JAN 2023 FAULT REPORT_NEW.xlsx|||`Sheet1$A7:U562`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
+        <Position x="858" y="426" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldFind><![CDATA[Informed user?
+]]></FieldFind>
+          <FieldSearch>Field1</FieldSearch>
+          <ReplaceFoundField>Field2</ReplaceFoundField>
+          <FindMode>FindAny</FindMode>
+          <NoCase value="False" />
+          <MatchWholeWord value="False" />
+          <ReplaceMode>Replace</ReplaceMode>
+          <ReplaceMultipleFound value="True" />
+          <ReplaceAppendFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="S/N" source="File: (Multiple Sources)" type="Double" />
+            <Field name="Date" source="File: (Multiple Sources)" type="Date" />
+            <Field name="Counter Staff Name" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Reporting Time" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Requestor ID" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Department" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Block" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Level" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Feedback" size="938" source="File: (Multiple Sources)" type="V_WString" />
+            <Field name="Category" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Assigned to" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completed?&#xA; (Y / N)" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Actual Issue" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Action Taken" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Remarks" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="WI&#xA;person in charge" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Informed user?&#xA;" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="F19" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F20" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F21" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F22" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F23" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F24" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F25" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F3" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="Double" />
+            <Field name="Location" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completed?&#xA;(Y / N)" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completion &#xA;Date" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="F17" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="Double" />
+            <Field name="F18" size="255" source="File: (Multiple Sources)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="702" y="486" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="70" />
+          <Fields>
+            <Field name="Field1" />
+            <Field name="Field2" />
+          </Fields>
+          <Data>
+            <r>
+              <c>yes via call</c>
+              <c>call</c>
+            </r>
+            <r>
+              <c>yes, on the spot</c>
+              <c>on the spot</c>
+            </r>
+            <r>
+              <c>via whatsapp</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>yes via e mail</c>
+              <c>email</c>
+            </r>
+            <r>
+              <c>yes, via e mail</c>
+              <c>email</c>
+            </r>
+            <r>
+              <c>yes, via whatsapp</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>whatsapps</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>Y</c>
+              <c />
+            </r>
+            <r>
+              <c>-</c>
+              <c />
+            </r>
+            <r>
+              <c>yes via whatspp</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>via phone</c>
+              <c>call</c>
+            </r>
+            <r>
+              <c>Yes via ms teams</c>
+              <c>msteams</c>
+            </r>
+            <r>
+              <c>yes via WhatsApp</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>2022-02-04</c>
+              <c />
+            </r>
+            <r>
+              <c>awaiting quotation</c>
+              <c />
+            </r>
+            <r>
+              <c>he knows himself</c>
+              <c>on the spot</c>
+            </r>
+            <r>
+              <c>pass to lift vendor</c>
+              <c />
+            </r>
+            <r>
+              <c>yes via whatapp</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>user call back</c>
+              <c>call</c>
+            </r>
+            <r>
+              <c>user knows</c>
+              <c>on the spot</c>
+            </r>
+            <r>
+              <c>user liase with CC</c>
+              <c>email</c>
+            </r>
+            <r>
+              <c>whatsapp.</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>WI2022/000106</c>
+              <c />
+            </r>
+            <r>
+              <c>yea via email</c>
+              <c>email</c>
+            </r>
+            <r>
+              <c>yea via whatsapp</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>yes ,via whatsapp</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>yes informed via call</c>
+              <c>call</c>
+            </r>
+            <r>
+              <c>yes on spot</c>
+              <c>on the spot</c>
+            </r>
+            <r>
+              <c>yes on te spot</c>
+              <c>on the spot</c>
+            </r>
+            <r>
+              <c>yes the via whatsapp</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>yes thru phone call</c>
+              <c>call</c>
+            </r>
+            <r>
+              <c>yes va email</c>
+              <c>email</c>
+            </r>
+            <r>
+              <c>yes va whatsapp</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>yes vi email</c>
+              <c>email</c>
+            </r>
+            <r>
+              <c>yes via  whatsapp</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>yes via emaiil</c>
+              <c>email</c>
+            </r>
+            <r>
+              <c>yes via landscape</c>
+              <c>on the spot</c>
+            </r>
+            <r>
+              <c>yes via msteam</c>
+              <c>msteams</c>
+            </r>
+            <r>
+              <c>yes via phone</c>
+              <c>call</c>
+            </r>
+            <r>
+              <c>yes via phone call</c>
+              <c>call</c>
+            </r>
+            <r>
+              <c>yes via the email</c>
+              <c>email</c>
+            </r>
+            <r>
+              <c>yes via whats app</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>yes via whatsa[[</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>yes viia whatsapp</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>yes visa msteams</c>
+              <c>msteams</c>
+            </r>
+            <r>
+              <c>yes visa whatsapp</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>yes viw email</c>
+              <c>email</c>
+            </r>
+            <r>
+              <c>Yes, thru email</c>
+              <c>email</c>
+            </r>
+            <r>
+              <c>yes, via email</c>
+              <c>email</c>
+            </r>
+            <r>
+              <c>yes, via ms teams</c>
+              <c>msteams</c>
+            </r>
+            <r>
+              <c>yes, via phone call</c>
+              <c>call</c>
+            </r>
+            <r>
+              <c>yes, via whattsapp</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>yes,on the spot</c>
+              <c>on the spot</c>
+            </r>
+            <r>
+              <c>yes. via whatsapp</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>yeson the spot</c>
+              <c>on the spot</c>
+            </r>
+            <r>
+              <c>yex via whatsapp</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>ys via email</c>
+              <c>email</c>
+            </r>
+            <r>
+              <c>ywa via whatsapp</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>yues via whatsapp</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>yes, via whatapps</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>yes via wahatsapp</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>yes via emai;</c>
+              <c>email</c>
+            </r>
+            <r>
+              <c>yes on the spot</c>
+              <c>on the spot</c>
+            </r>
+            <r>
+              <c>yes via email</c>
+              <c>email</c>
+            </r>
+            <r>
+              <c>on the spot</c>
+              <c>on the spot</c>
+            </r>
+            <r>
+              <c>Yes via call</c>
+              <c>call</c>
+            </r>
+            <r>
+              <c>whatsapp</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>yes via whatsapp</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>yes vis whatsapp</c>
+              <c>whatsapp</c>
+            </r>
+            <r>
+              <c>yes via msteams</c>
+              <c>msteams</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field1" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Field2" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1206" y="426" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace([Reporting Time], '.', ':')&#xA;" field="Reporting Time" size="255" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Reporting Time = Replace([Reporting Time], '.', ':')
+
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="S/N" source="File: (Multiple Sources)" type="Double" />
+            <Field name="Date" source="File: (Multiple Sources)" type="Date" />
+            <Field name="Counter Staff Name" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Reporting Time" size="255" source="Formula: Replace([Reporting Time], '.', ':')&#xA;" type="V_String" />
+            <Field name="Requestor ID" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Department" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Block" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Level" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Feedback" size="938" source="File: (Multiple Sources)" type="V_WString" />
+            <Field name="Category" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Assigned to" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completed?&#xA; (Y / N)" size="255" source="Formula: [Completed?&#xA; (Y / N)] + [Completed?&#xA;(Y / N)]" type="V_String" />
+            <Field name="Actual Issue" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Action Taken" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Remarks" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="WI&#xA;person in charge" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Informed user?&#xA;" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Location" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completion &#xA;Date" size="255" source="File: (Multiple Sources)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings>
+        <Position x="930" y="426" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"Reporting Time"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">False</Value>
+          <Value name="Check Box (122)">True</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output26">
+          <RecordInfo>
+            <Field name="S/N" source="File: (Multiple Sources)" type="Double" />
+            <Field name="Date" source="File: (Multiple Sources)" type="Date" />
+            <Field name="Counter Staff Name" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Reporting Time" size="255" source="Formula: IF !IsNull([_CurrentField_]) THEN &#xA;  REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;ELSE [_CurrentField_]&#xA;ENDIF" type="V_String" />
+            <Field name="Requestor ID" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Department" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Block" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Level" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Feedback" size="938" source="File: (Multiple Sources)" type="V_WString" />
+            <Field name="Category" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Assigned to" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completed?&#xA; (Y / N)" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Actual Issue" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Action Taken" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Remarks" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="WI&#xA;person in charge" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Informed user?&#xA;" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="F19" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F20" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F21" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F22" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F23" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F24" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F25" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F3" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="Double" />
+            <Field name="Location" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completed?&#xA;(Y / N)" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completion &#xA;Date" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="F17" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="Double" />
+            <Field name="F18" size="255" source="File: (Multiple Sources)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1302" y="426" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace(Replace([Reporting Time], 'AM', ':00'), 'PM', ':00')&#xA;" field="Reporting Time" size="255" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Reporting Time = Replace(Replace([Reporting Time], 'AM', ':00'), 'PM', ':00')
+
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="S/N" source="File: (Multiple Sources)" type="Double" />
+            <Field name="Date" source="File: (Multiple Sources)" type="Date" />
+            <Field name="Counter Staff Name" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Reporting Time" size="255" source="Formula: Replace(Replace([Reporting Time], 'AM', ':00'), 'PM', ':00')&#xA;" type="V_String" />
+            <Field name="Requestor ID" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Department" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Block" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Level" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Feedback" size="938" source="File: (Multiple Sources)" type="V_WString" />
+            <Field name="Category" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Assigned to" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completed?&#xA; (Y / N)" size="255" source="Formula: [Completed?&#xA; (Y / N)] + [Completed?&#xA;(Y / N)]" type="V_String" />
+            <Field name="Actual Issue" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Action Taken" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Remarks" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="WI&#xA;person in charge" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Informed user?&#xA;" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Location" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completion &#xA;Date" size="255" source="File: (Multiple Sources)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings>
+        <Position x="702" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">""</Value>
+          <Value name="Check Box (84)">False</Value>
+          <Value name="Check Box (117)">False</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">False</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output26">
+          <RecordInfo>
+            <Field name="S/N" source="File: (Multiple Sources)" type="Double" />
+            <Field name="Date" source="File: (Multiple Sources)" type="Date" />
+            <Field name="Counter Staff Name" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Reporting Time" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Requestor ID" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Department" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Block" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Level" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Feedback" size="938" source="File: (Multiple Sources)" type="V_WString" />
+            <Field name="Category" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Assigned to" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completed?&#xA; (Y / N)" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Actual Issue" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Action Taken" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Remarks" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="WI&#xA;person in charge" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Informed user?&#xA;" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="F19" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F20" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F21" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F22" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F23" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F24" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F25" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F3" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="Double" />
+            <Field name="Location" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completed?&#xA;(Y / N)" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completion &#xA;Date" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="F17" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="Double" />
+            <Field name="F18" size="255" source="File: (Multiple Sources)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="606" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="S/N" source="File: (Multiple Sources)" type="Double" />
+            <Field name="Date" source="File: (Multiple Sources)" type="Date" />
+            <Field name="Counter Staff Name" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Reporting Time" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Requestor ID" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Department" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Block" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Level" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Feedback" size="938" source="File: (Multiple Sources)" type="V_WString" />
+            <Field name="Category" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Assigned to" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completed?&#xA; (Y / N)" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Actual Issue" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Action Taken" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Remarks" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="WI&#xA;person in charge" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Informed user?&#xA;" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="F19" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F20" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F21" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F22" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F23" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F24" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F25" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F3" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="Double" />
+            <Field name="Location" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completed?&#xA;(Y / N)" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completion &#xA;Date" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="F17" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="Double" />
+            <Field name="F18" size="255" source="File: (Multiple Sources)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="JupyterCode">
+        <Position x="1122" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Notebook><![CDATA[{"cells":[{"cell_type":"markdown","metadata":{"ayx":{"cell_class":"text_cell","cell_css":"border: 3px solid #357; margin: 4px; background: #fbffff","cell_type":"markdown","contents_keyword":"Alteryx.help()","first_line":"Run `Alteryx.help()` for info about useful functions.","label":"info"}},"source":["Run `Alteryx.help()` for info about useful functions.  \n","i.e., `Alteryx.read(\"#1\")`, `Alteryx.write(df,1)`, `Alteryx.getWorkflowConstant(\"Engine.WorkflowDirectory\")`"]},{"cell_type":"code","execution_count":1,"metadata":{"ayx":{"cell_class":"code_cell","cell_css":"border: 1px solid #58a; margin: 2px;","cell_type":"code","contents_keyword":"installPackages","first_line":"# List all non-standard packages to be imported by your","label":"deps"}},"outputs":[],"source":["# List all non-standard packages to be imported by your \n","# script here (only missing packages will be installed)\n","from ayx import Package\n","#Package.installPackages(['pandas','numpy'])"]},{"cell_type":"code","execution_count":2,"metadata":{"scrolled":true},"outputs":[],"source":["from ayx import Alteryx\n","import numpy as np\n","import pandas as pd\n","import nltk\n","import string\n","nltk.download('stopwords')\n","nltk.download('punkt')\n","nltk.download('word_tokenize')\n","nltk.download('SentimentIntensityAnalyzer')\n","nltk.download('vader_lexicon')\n","nltk.download('wordnet')\n","from sklearn.feature_extraction.text import CountVectorizer\n","\n","from nltk.corpus import stopwords\n","from nltk.tokenize import word_tokenize\n","from nltk.sentiment import SentimentIntensityAnalyzer\n","from nltk.stem import WordNetLemmatizer"]},{"cell_type":"code","execution_count":3,"metadata":{},"outputs":[],"source":["pip install --upgrade nltk"]},{"cell_type":"code","execution_count":4,"metadata":{"scrolled":false},"outputs":[],"source":["# Read the input data from Alteryx\n","df = Alteryx.read(\"#1\")\n","df.head()"]},{"cell_type":"code","execution_count":5,"metadata":{},"outputs":[],"source":["# Preprocessing: Convert to lowercase, remove stopwords, and tokenize\n","stop_words = set(stopwords.words(\"english\"))\n","lemmatizer = WordNetLemmatizer()\n","\n","def preprocess_text(text):\n","    if text is None:\n","        return ''  # Return an empty string or any other default value\n","    \n","    if pd.notnull(text):  # Skip preprocessing for missing values\n","        # Convert to lowercase\n","        text = text.lower()\n","        \n","        # Remove punctuation\n","        text = text.translate(str.maketrans(\"\", \"\", string.punctuation))\n","        \n","        # Tokenize the text\n","        tokens = word_tokenize(text)\n","        \n","        # Remove stopwords and non-alphabetic characters\n","        tokens = [token for token in tokens if token.isalpha() and token not in stop_words]\n","  \n","        \n","        # Lemmatization\n","        lemmatized_tokens = [lemmatizer.lemmatize(token) for token in tokens]\n","        \n","        return \" \".join(tokens)  # Join tokens into a single sentence\n","    else:\n","        return None\n"]},{"cell_type":"code","execution_count":6,"metadata":{},"outputs":[],"source":["# Apply preprocessing to the desired columns\n","# Apply the data cleansing function to the 'Feedback' column\n","df['Feedback'] = df['Feedback'].apply(preprocess_text)"]},{"cell_type":"code","execution_count":7,"metadata":{},"outputs":[],"source":["df.head()"]},{"cell_type":"code","execution_count":8,"metadata":{},"outputs":[],"source":["df['Feedback'].describe()"]},{"cell_type":"code","execution_count":9,"metadata":{},"outputs":[],"source":["df=pd.DataFrame(df)"]},{"cell_type":"code","execution_count":10,"metadata":{},"outputs":[],"source":["Alteryx.write(df, 1)\n"]},{"cell_type":"code","execution_count":null,"metadata":{},"outputs":[],"source":[]}],"metadata":{"kernelspec":{"display_name":"designerbasetools_venv","language":"python","name":"designerbasetools_venv"},"language_info":{"codemirror_mode":{"name":"ipython","version":3},"file_extension":".py","mimetype":"text/x-python","name":"python","nbconvert_exporter":"python","pygments_lexer":"ipython3","version":"3.8.5"}},"nbformat":4,"nbformat_minor":2}]]></Notebook>
+          <WorkflowName>c:\users\ambkr\documents\3.1\dscp\w12\data cleaning phase 2.yxmc</WorkflowName>
+          <JupyterProduction>false</JupyterProduction>
+          <vEnvName>designerbasetools_venv</vEnvName>
+          <DefaultVenv>1</DefaultVenv>
+          <productionModeScript />
+          <Port>61671</Port>
+          <JupyterGuidDir>e7f9a3225355dcbc905f70af5ea7d137</JupyterGuidDir>
+          <JupyterGuidCopy />
+          <LastExecutedByEngineVersion>2022.3.1.395</LastExecutedByEngineVersion>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output1">
+          <RecordInfo>
+            <Field name="S/N" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Date" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Counter Staff Name" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Reporting Time" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Department" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Block" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Level" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Feedback" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Informed to?" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Problem Report (PR) Number" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Remarks" size="1073741823" source="PythonTool:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxJupyterPluginEngine.dll" EngineDllEntryPoint="AlteryxJupyter" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="JupyterCode">
+        <Position x="1398" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Notebook><![CDATA[{"cells":[{"cell_type":"markdown","metadata":{"ayx":{"cell_class":"text_cell","cell_css":"border: 3px solid #357; margin: 4px; background: #fbffff","cell_type":"markdown","contents_keyword":"Alteryx.help()","first_line":"Run `Alteryx.help()` for info about useful functions.","label":"info"}},"source":["Run `Alteryx.help()` for info about useful functions.  \n","i.e., `Alteryx.read(\"#1\")`, `Alteryx.write(df,1)`, `Alteryx.getWorkflowConstant(\"Engine.WorkflowDirectory\")`"]},{"cell_type":"code","execution_count":1,"metadata":{"ayx":{"cell_class":"code_cell","cell_css":"border: 1px solid #58a; margin: 2px;","cell_type":"code","contents_keyword":"installPackages","first_line":"# List all non-standard packages to be imported by your","label":"deps"}},"outputs":[],"source":["# List all non-standard packages to be imported by your \n","# script here (only missing packages will be installed)\n","from ayx import Package\n","#Package.installPackages(['pandas','numpy'])"]},{"cell_type":"code","execution_count":2,"metadata":{"scrolled":true},"outputs":[],"source":["from ayx import Alteryx\n","import numpy as np\n","import pandas as pd\n","import nltk\n","import string\n","nltk.download('stopwords')\n","nltk.download('punkt')\n","nltk.download('word_tokenize')\n","nltk.download('SentimentIntensityAnalyzer')\n","nltk.download('vader_lexicon')\n","nltk.download('wordnet')\n","from sklearn.feature_extraction.text import CountVectorizer\n","\n","from nltk.corpus import stopwords\n","from nltk.tokenize import word_tokenize\n","from nltk.sentiment import SentimentIntensityAnalyzer\n","from nltk.stem import WordNetLemmatizer"]},{"cell_type":"code","execution_count":3,"metadata":{"scrolled":false},"outputs":[],"source":["# Read the input data from Alteryx\n","df = Alteryx.read(\"#1\")\n","df.head()"]},{"cell_type":"code","execution_count":4,"metadata":{},"outputs":[],"source":["# Preprocessing: Convert to lowercase, remove stopwords, and tokenize\n","stop_words = set(stopwords.words(\"english\"))\n","lemmatizer = WordNetLemmatizer()\n","\n","def preprocess_text(text):\n","    if text is None:\n","        return ''  # Return an empty string or any other default value\n","    \n","    if pd.notnull(text):  # Skip preprocessing for missing values\n","        # Convert to lowercase\n","        text = text.lower()\n","        \n","        # Remove punctuation\n","        text = text.translate(str.maketrans(\"\", \"\", string.punctuation))\n","        \n","        # Tokenize the text\n","        tokens = word_tokenize(text)\n","        \n","        # Remove stopwords and non-alphabetic characters\n","        tokens = [token for token in tokens if token.isalpha() and token not in stop_words]\n","  \n","        \n","        # Lemmatization\n","        lemmatized_tokens = [lemmatizer.lemmatize(token) for token in tokens]\n","        \n","        return \" \".join(tokens)  # Join tokens into a single sentence\n","    else:\n","        return None\n"]},{"cell_type":"code","execution_count":5,"metadata":{},"outputs":[],"source":["# Apply preprocessing to the desired columns\n","# Apply the data cleansing function to the 'Feedback' column\n","df['Feedback'] = df['Feedback'].apply(preprocess_text)\n","\n","# Apply the data cleansing function to the 'Actual Issue' column\n","df['Actual Issue'] = df['Actual Issue'].apply(preprocess_text)\n","\n","# Apply the data cleansing function to the 'Action Taken' column\n","df['Action Taken'] = df['Action Taken'].apply(preprocess_text)"]},{"cell_type":"code","execution_count":6,"metadata":{},"outputs":[],"source":["df.head()"]},{"cell_type":"code","execution_count":7,"metadata":{},"outputs":[],"source":["df['Feedback'].describe()"]},{"cell_type":"code","execution_count":8,"metadata":{},"outputs":[],"source":["df=pd.DataFrame(df)"]},{"cell_type":"code","execution_count":9,"metadata":{},"outputs":[],"source":["Alteryx.write(df, 1)"]}],"metadata":{"kernelspec":{"display_name":"designerbasetools_venv","language":"python","name":"designerbasetools_venv"},"language_info":{"codemirror_mode":{"name":"ipython","version":3},"file_extension":".py","mimetype":"text/x-python","name":"python","nbconvert_exporter":"python","pygments_lexer":"ipython3","version":"3.8.5"}},"nbformat":4,"nbformat_minor":2}]]></Notebook>
+          <WorkflowName>c:\users\ambkr\documents\3.1\dscp\w12\data cleaning phase 2.yxmc</WorkflowName>
+          <JupyterProduction>false</JupyterProduction>
+          <vEnvName>designerbasetools_venv</vEnvName>
+          <DefaultVenv>1</DefaultVenv>
+          <productionModeScript />
+          <Port>61671</Port>
+          <JupyterGuidDir>cf7063c3126be16ff69231aa328dae04</JupyterGuidDir>
+          <JupyterGuidCopy />
+          <LastExecutedByEngineVersion>2022.3.1.395</LastExecutedByEngineVersion>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output1">
+          <RecordInfo>
+            <Field name="S/N" source="PythonTool:" type="Double" />
+            <Field name="Date" source="PythonTool:" type="Date" />
+            <Field name="Counter Staff Name" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Reporting Time" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Requestor ID" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Department" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Block" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Level" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Feedback" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Category" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Assigned to" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Completed?&#xA; (Y / N)" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Actual Issue" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Action Taken" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Remarks" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="WI&#xA;person in charge" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Informed user?&#xA;" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Location" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Completion &#xA;Date" size="1073741823" source="PythonTool:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxJupyterPluginEngine.dll" EngineDllEntryPoint="AlteryxJupyter" />
+    </Node>
+    <Node ToolID="39">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1302" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">C:\Users\ambkr\Documents\3.1\DSCP\W12\Phase2_Fault_Operations_1.xlsx|||Sheet1</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <PreserveFormat>False</PreserveFormat>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Phase2_Fault_Operations_1.xlsx
+Query=Sheet1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1494" y="390" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">C:\Users\ambkr\Documents\3.1\DSCP\W12\Phase2_Fault_Operations_2.xlsx|||Sheet1</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <PreserveFormat>False</PreserveFormat>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Phase2_Fault_Operations_2.xlsx
+Query=Sheet1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="41">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="726" y="942" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Ref No." size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Submission" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Fault Category" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Section" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Zone" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Location / Equipment Type" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Model" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Site Name" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Category" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Location / Equipment" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Caption" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Remark" size="255" source="File: (Multiple Sources)" type="V_WString" />
+            <Field name="Corrective Remark" size="255" source="File: (Multiple Sources)" type="V_WString" />
+            <Field name="Call in Time" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Follow Up" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completed" size="255" source="File: (Multiple Sources)" type="V_WString" />
+            <Field name="Completed By" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completed On" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Closed" size="255" source="File: (Multiple Sources)" type="V_WString" />
+            <Field name="Closed By" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Closed On" size="255" source="File: (Multiple Sources)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="JupyterCode">
+        <Position x="990" y="930" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Notebook><![CDATA[{"cells":[{"cell_type":"markdown","metadata":{"ayx":{"cell_class":"text_cell","cell_css":"border: 3px solid #357; margin: 4px; background: #fbffff","cell_type":"markdown","contents_keyword":"Alteryx.help()","first_line":"Run `Alteryx.help()` for info about useful functions.","label":"info"}},"source":["Run `Alteryx.help()` for info about useful functions.  \n","i.e., `Alteryx.read(\"#1\")`, `Alteryx.write(df,1)`, `Alteryx.getWorkflowConstant(\"Engine.WorkflowDirectory\")`"]},{"cell_type":"code","execution_count":1,"metadata":{"ayx":{"cell_class":"code_cell","cell_css":"border: 1px solid #58a; margin: 2px;","cell_type":"code","contents_keyword":"installPackages","first_line":"# List all non-standard packages to be imported by your","label":"deps"}},"outputs":[],"source":["# List all non-standard packages to be imported by your \n","# script here (only missing packages will be installed)\n","from ayx import Package\n","#Package.installPackages(['pandas','numpy'])"]},{"cell_type":"code","execution_count":2,"metadata":{"scrolled":true},"outputs":[],"source":["from ayx import Alteryx\n","import numpy as np\n","import pandas as pd\n","import nltk\n","import string\n","nltk.download('stopwords')\n","nltk.download('punkt')\n","nltk.download('word_tokenize')\n","nltk.download('SentimentIntensityAnalyzer')\n","nltk.download('vader_lexicon')\n","nltk.download('wordnet')\n","from sklearn.feature_extraction.text import CountVectorizer\n","\n","from nltk.corpus import stopwords\n","from nltk.tokenize import word_tokenize\n","from nltk.sentiment import SentimentIntensityAnalyzer\n","from nltk.stem import WordNetLemmatizer"]},{"cell_type":"code","execution_count":3,"metadata":{"scrolled":false},"outputs":[],"source":["# Read the input data from Alteryx\n","df = Alteryx.read(\"#1\")\n","df.head()"]},{"cell_type":"code","execution_count":4,"metadata":{},"outputs":[],"source":["# Preprocessing: Convert to lowercase, remove stopwords, and tokenize\n","stop_words = set(stopwords.words(\"english\"))\n","lemmatizer = WordNetLemmatizer()\n","\n","def preprocess_text(text):\n","    if text is None:\n","        return ''  # Return an empty string or any other default value\n","    \n","    if pd.notnull(text):  # Skip preprocessing for missing values\n","        # Convert to lowercase\n","        text = text.lower()\n","        \n","        # Remove punctuation\n","        text = text.translate(str.maketrans(\"\", \"\", string.punctuation))\n","        \n","        # Tokenize the text\n","        tokens = word_tokenize(text)\n","        \n","        # Remove stopwords and non-alphabetic characters\n","        tokens = [token for token in tokens if token.isalpha() and token not in stop_words]\n","  \n","        \n","        # Lemmatization\n","        lemmatized_tokens = [lemmatizer.lemmatize(token) for token in tokens]\n","        \n","        return \" \".join(tokens)  # Join tokens into a single sentence\n","    else:\n","        return None\n"]},{"cell_type":"code","execution_count":5,"metadata":{},"outputs":[],"source":["# Apply preprocessing to the desired columns\n","# Apply the data cleansing function to the 'Feedback' column\n","df['Remark'] = df['Remark'].apply(preprocess_text)\n","\n","# Apply the data cleansing function to the 'Actual Issue' column\n","df['Corrective Remark'] = df['Corrective Remark'].apply(preprocess_text)\n"]},{"cell_type":"code","execution_count":6,"metadata":{},"outputs":[],"source":["df.head()"]},{"cell_type":"code","execution_count":7,"metadata":{},"outputs":[],"source":["df['Remark'].describe()"]},{"cell_type":"code","execution_count":8,"metadata":{},"outputs":[],"source":["df['Corrective Remark'].describe()"]},{"cell_type":"code","execution_count":9,"metadata":{},"outputs":[],"source":["df=pd.DataFrame(df)"]},{"cell_type":"code","execution_count":10,"metadata":{},"outputs":[],"source":["Alteryx.write(df, 1)"]}],"metadata":{"kernelspec":{"display_name":"designerbasetools_venv","language":"python","name":"designerbasetools_venv"},"language_info":{"codemirror_mode":{"name":"ipython","version":3},"file_extension":".py","mimetype":"text/x-python","name":"python","nbconvert_exporter":"python","pygments_lexer":"ipython3","version":"3.8.5"}},"nbformat":4,"nbformat_minor":2}]]></Notebook>
+          <WorkflowName>c:\users\ambkr\documents\3.1\dscp\w12\data cleaning phase 2.yxmc</WorkflowName>
+          <JupyterProduction>false</JupyterProduction>
+          <vEnvName>designerbasetools_venv</vEnvName>
+          <DefaultVenv>1</DefaultVenv>
+          <productionModeScript />
+          <Port>61671</Port>
+          <JupyterGuidDir>b91cccbfab7f8ae85f03c1ebcb5636fb</JupyterGuidDir>
+          <JupyterGuidCopy />
+          <LastExecutedByEngineVersion>2022.3.1.395</LastExecutedByEngineVersion>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output1">
+          <RecordInfo>
+            <Field name="Ref No." size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Submission" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Fault Category" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Section" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Zone" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Location / Equipment Type" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Model" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Site Name" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Category" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Location / Equipment" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Caption" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Remark" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Corrective Remark" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Call in Time" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Follow Up" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Completed" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Completed By" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Completed On" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Closed" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Closed By" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Closed On" size="1073741823" source="PythonTool:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxJupyterPluginEngine.dll" EngineDllEntryPoint="AlteryxJupyter" />
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings>
+        <Position x="810" y="942" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"Ref No.","Submission","Fault Category","Section","Zone","Location / Equipment Type","Model","Site Name","Category","Location / Equipment","Caption","Remark","Corrective Remark","Call in Time","Follow Up","Completed","Completed By","Completed On","Closed","Closed By","Closed On"</Value>
+          <Value name="Check Box (84)">False</Value>
+          <Value name="Check Box (117)">False</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">True</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output26">
+          <RecordInfo>
+            <Field name="Ref No." size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_String" />
+            <Field name="Submission" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_String" />
+            <Field name="Fault Category" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_String" />
+            <Field name="Section" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_String" />
+            <Field name="Zone" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_String" />
+            <Field name="Location / Equipment Type" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_String" />
+            <Field name="Model" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_String" />
+            <Field name="Site Name" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_String" />
+            <Field name="Category" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_String" />
+            <Field name="Location / Equipment" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_String" />
+            <Field name="Caption" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_String" />
+            <Field name="Remark" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_WString" />
+            <Field name="Corrective Remark" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_WString" />
+            <Field name="Call in Time" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_String" />
+            <Field name="Follow Up" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_String" />
+            <Field name="Completed" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_WString" />
+            <Field name="Completed By" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_String" />
+            <Field name="Completed On" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_String" />
+            <Field name="Closed" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_WString" />
+            <Field name="Closed By" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_String" />
+            <Field name="Closed On" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1110" y="906" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">C:\Users\ambkr\Documents\3.1\DSCP\W12\Phase2_Fault_Operations_3.xlsx|||Sheet1</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <PreserveFormat>False</PreserveFormat>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Phase2_Fault_Operations_3.xlsx
+Query=Sheet1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1014" y="426" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Completed?&#xA; (Y / N)] + [Completed?&#xA;(Y / N)]" field="Completed?&#xA; (Y / N)" size="255" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Completed?
+ (Y / N) = [Completed?
+ (Y / N)] + [Completed?
+(Y / N)]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="S/N" source="File: (Multiple Sources)" type="Double" />
+            <Field name="Date" source="File: (Multiple Sources)" type="Date" />
+            <Field name="Counter Staff Name" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Reporting Time" size="255" source="Formula: IF !IsNull([_CurrentField_]) THEN &#xA;  REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;ELSE [_CurrentField_]&#xA;ENDIF" type="V_String" />
+            <Field name="Requestor ID" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Department" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Block" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Level" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Feedback" size="938" source="File: (Multiple Sources)" type="V_WString" />
+            <Field name="Category" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Assigned to" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completed?&#xA; (Y / N)" size="255" source="Formula: [Completed?&#xA; (Y / N)] + [Completed?&#xA;(Y / N)]" type="V_String" />
+            <Field name="Actual Issue" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Action Taken" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Remarks" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="WI&#xA;person in charge" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Informed user?&#xA;" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="F19" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F20" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F21" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F22" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F23" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F24" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F25" source="File: (Multiple Sources)" type="Double" />
+            <Field name="F3" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2208_AUG 2022 FAULT REPORT.xlsx|||`AUGUST 2022$`" type="Double" />
+            <Field name="Location" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completed?&#xA;(Y / N)" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completion &#xA;Date" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="F17" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2112_DEC 2021 FAULT REPORT.xlsx|||`DECEMBER 2021$`" type="Double" />
+            <Field name="F18" size="255" source="File: (Multiple Sources)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="46">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1110" y="426" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="F19" selected="False" />
+            <SelectField field="F20" selected="False" />
+            <SelectField field="F21" selected="False" />
+            <SelectField field="F22" selected="False" />
+            <SelectField field="F23" selected="False" />
+            <SelectField field="F24" selected="False" />
+            <SelectField field="F25" selected="False" />
+            <SelectField field="F3" selected="False" />
+            <SelectField field="Completed?&#xA;(Y / N)" selected="False" />
+            <SelectField field="F17" selected="False" />
+            <SelectField field="F18" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="S/N" source="File: (Multiple Sources)" type="Double" />
+            <Field name="Date" source="File: (Multiple Sources)" type="Date" />
+            <Field name="Counter Staff Name" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Reporting Time" size="255" source="Formula: IF !IsNull([_CurrentField_]) THEN &#xA;  REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;ELSE [_CurrentField_]&#xA;ENDIF" type="V_String" />
+            <Field name="Requestor ID" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Department" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Block" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Level" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Feedback" size="938" source="File: (Multiple Sources)" type="V_WString" />
+            <Field name="Category" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Assigned to" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completed?&#xA; (Y / N)" size="255" source="Formula: [Completed?&#xA; (Y / N)] + [Completed?&#xA;(Y / N)]" type="V_String" />
+            <Field name="Actual Issue" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Action Taken" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Remarks" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="WI&#xA;person in charge" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2111_NOV 2021 FAULT REPORT.xlsx|||`NOVEMBER 2021$`" type="V_String" />
+            <Field name="Informed user?&#xA;" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Location" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Completion &#xA;Date" size="255" source="File: (Multiple Sources)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="47">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1218" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="S/N" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Date" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Counter Staff Name" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Reporting Time" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Department" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Block" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Level" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Feedback" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Informed to?" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Problem Report (PR) Number" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Remarks" size="1073741823" source="PythonTool:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="48">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicRename.DynamicRename">
+        <Position x="750" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RenameMode>FirstRow</RenameMode>
+          <Fields orderChanged="False">
+            <Field name="F1" />
+            <Field name="F2" />
+            <Field name="F3" />
+            <Field name="F4" />
+            <Field name="F5" />
+            <Field name="F6" />
+            <Field name="F7" />
+            <Field name="F8" />
+            <Field name="F9" />
+            <Field name="F10" />
+            <Field name="F11" />
+            <Field name="F12" />
+            <Field name="*Unknown" />
+          </Fields>
+          <Expression />
+          <FirstRow>
+            <OnError>Warn</OnError>
+          </FirstRow>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="S/N" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Date" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Counter Staff Name" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Case No.&#xA; (YYYYMMDD000)" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Reporting Time" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Department" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Block" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Level" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Feedback" size="262" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Informed to?" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Problem Report (PR) Number" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+            <Field name="Remarks" size="255" source="File: C:\Users\ambkr\Documents\3.1\DSCP\W6\5 Faults_Reporting\2110_OCT 2021 FAULT REPORT.xlsx|||`OCTOBER 2021$`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicRename" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="48" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output26" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection name="#4">
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection name="#5">
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection name="#6">
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection name="#7">
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection name="#8">
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection name="#9">
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection name="#10">
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection name="#11">
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection name="#4">
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="29" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="26" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output26" />
+      <Destination ToolID="26" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output26" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="34" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output1" />
+      <Destination ToolID="47" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output1" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="43" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="Output1" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="43" Connection="Output26" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="Output" />
+      <Destination ToolID="46" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="46" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="47" Connection="Output" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="5" Connection="Input2" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Data Cleaning phase 2</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="9f64c747-681a-470c-91ea-57593c933121" />
+      <Telemetry>
+        <PreviousWorkflowId value="5c5f9dbf-7701-4db4-9517-0b78cb03d67d" />
+        <OriginWorkflowId value="4a9895a9-6261-4e03-96cc-150bb8ae0709" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (35)</Name>
+          <ToolId value="35" />
+          <Questions />
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="5" Selected="True" />
+        <Tool ToolId="29" Selected="True" />
+        <Tool ToolId="34" Selected="True" />
+        <Tool ToolId="39" Selected="True" />
+        <Tool ToolId="40" Selected="True" />
+        <Tool ToolId="43" Selected="True" />
+        <Tool ToolId="44" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
