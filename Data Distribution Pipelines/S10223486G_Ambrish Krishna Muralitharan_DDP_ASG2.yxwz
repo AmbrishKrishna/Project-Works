@@ -1,0 +1,858 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1243" y="138" width="640" height="197" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Display Data</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="3">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+            <Position x="1268" y="189" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Field>JSON_Name</Field>
+              <ErrorHandling>Last</ErrorHandling>
+              <RootName>JSON_Name</RootName>
+              <Delimeters value="." />
+              <NumFields value="3" />
+              <Flags value="0" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="BusStop" source="TextInput:" type="Int32" />
+                <Field name="JSON_Name" size="1073741823" source="JSON_Parse" type="V_WString" />
+                <Field name="JSON_ValueString" size="1073741823" source="JSON_Parse" type="V_WString" />
+                <Field description="TextToColumns: Parsed from JSON_Name" name="JSON_Name1" size="1073741823" source="TextToColumns: Parsed from JSON_Name" type="V_WString" />
+                <Field description="TextToColumns: Parsed from JSON_Name" name="JSON_Name2" size="1073741823" source="TextToColumns: Parsed from JSON_Name" type="V_WString" />
+                <Field description="TextToColumns: Parsed from JSON_Name" name="JSON_Name3" size="1073741823" source="TextToColumns: Parsed from JSON_Name" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+        </Node>
+        <Node ToolID="12">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+            <Position x="1340" y="189" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <GroupFields>
+                <Field field="JSON_Name2" />
+              </GroupFields>
+              <HeaderField field="JSON_Name3" />
+              <DataField field="JSON_ValueString" />
+              <Methods>
+                <Method method="Concat" />
+                <Separator>,</Separator>
+                <FieldSize value="2048" />
+              </Methods>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field description="TextToColumns: Parsed from JSON_Name" name="JSON_Name2" size="1073741823" source="CrossTab:Group:Concat:" type="V_WString" />
+                <Field name="NextBus_EstimatedArrival" size="2048" source="CrossTab:Header:JSON_Name3:NextBus.EstimatedArrival:Concat:" type="V_WString" />
+                <Field name="NextBus_Feature" size="2048" source="CrossTab:Header:JSON_Name3:NextBus.Feature:Concat:" type="V_WString" />
+                <Field name="NextBus_Load" size="2048" source="CrossTab:Header:JSON_Name3:NextBus.Load:Concat:" type="V_WString" />
+                <Field name="NextBus_Type" size="2048" source="CrossTab:Header:JSON_Name3:NextBus.Type:Concat:" type="V_WString" />
+                <Field name="NextBus2_EstimatedArrival" size="2048" source="CrossTab:Header:JSON_Name3:NextBus2.EstimatedArrival:Concat:" type="V_WString" />
+                <Field name="NextBus2_Feature" size="2048" source="CrossTab:Header:JSON_Name3:NextBus2.Feature:Concat:" type="V_WString" />
+                <Field name="NextBus2_Load" size="2048" source="CrossTab:Header:JSON_Name3:NextBus2.Load:Concat:" type="V_WString" />
+                <Field name="NextBus2_Type" size="2048" source="CrossTab:Header:JSON_Name3:NextBus2.Type:Concat:" type="V_WString" />
+                <Field name="NextBus3_EstimatedArrival" size="2048" source="CrossTab:Header:JSON_Name3:NextBus3.EstimatedArrival:Concat:" type="V_WString" />
+                <Field name="NextBus3_Feature" size="2048" source="CrossTab:Header:JSON_Name3:NextBus3.Feature:Concat:" type="V_WString" />
+                <Field name="NextBus3_Load" size="2048" source="CrossTab:Header:JSON_Name3:NextBus3.Load:Concat:" type="V_WString" />
+                <Field name="NextBus3_Type" size="2048" source="CrossTab:Header:JSON_Name3:NextBus3.Type:Concat:" type="V_WString" />
+                <Field name="ServiceNo" size="2048" source="CrossTab:Header:JSON_Name3:ServiceNo:Concat:" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+        </Node>
+        <Node ToolID="14">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+            <Position x="1412" y="189" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldType>Text</FieldType>
+              <Fields orderChanged="False">
+                <Field name="NextBus_EstimatedArrival" />
+                <Field name="NextBus2_EstimatedArrival" />
+                <Field name="NextBus3_EstimatedArrival" />
+                <Field name="JSON_Name2" selected="False" />
+                <Field name="NextBus_Feature" selected="False" />
+                <Field name="NextBus_Load" selected="False" />
+                <Field name="NextBus_Type" selected="False" />
+                <Field name="NextBus2_Feature" selected="False" />
+                <Field name="NextBus2_Load" selected="False" />
+                <Field name="NextBus2_Type" selected="False" />
+                <Field name="NextBus3_Feature" selected="False" />
+                <Field name="NextBus3_Load" selected="False" />
+                <Field name="NextBus3_Type" selected="False" />
+                <Field name="ServiceNo" selected="False" />
+                <Field name="*Unknown" selected="False" />
+              </Fields>
+              <CopyOutput value="False" />
+              <Expression>Replace(LEFT([_CurrentField_], 19), 'T', ' ')</Expression>
+              <ChangeFieldType value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Replace(LEFT([_CurrentField_], 19), 'T', ' ')</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field description="TextToColumns: Parsed from JSON_Name" name="JSON_Name2" size="1073741823" source="CrossTab:Group:Concat:" type="V_WString" />
+                <Field name="NextBus_EstimatedArrival" size="2048" source="Formula: Replace(LEFT([_CurrentField_], 19), 'T', ' ')" type="V_WString" />
+                <Field name="NextBus_Feature" size="2048" source="CrossTab:Header:JSON_Name3:NextBus.Feature:Concat:" type="V_WString" />
+                <Field name="NextBus_Load" size="2048" source="CrossTab:Header:JSON_Name3:NextBus.Load:Concat:" type="V_WString" />
+                <Field name="NextBus_Type" size="2048" source="CrossTab:Header:JSON_Name3:NextBus.Type:Concat:" type="V_WString" />
+                <Field name="NextBus2_EstimatedArrival" size="2048" source="Formula: Replace(LEFT([_CurrentField_], 19), 'T', ' ')" type="V_WString" />
+                <Field name="NextBus2_Feature" size="2048" source="CrossTab:Header:JSON_Name3:NextBus2.Feature:Concat:" type="V_WString" />
+                <Field name="NextBus2_Load" size="2048" source="CrossTab:Header:JSON_Name3:NextBus2.Load:Concat:" type="V_WString" />
+                <Field name="NextBus2_Type" size="2048" source="CrossTab:Header:JSON_Name3:NextBus2.Type:Concat:" type="V_WString" />
+                <Field name="NextBus3_EstimatedArrival" size="2048" source="Formula: Replace(LEFT([_CurrentField_], 19), 'T', ' ')" type="V_WString" />
+                <Field name="NextBus3_Feature" size="2048" source="CrossTab:Header:JSON_Name3:NextBus3.Feature:Concat:" type="V_WString" />
+                <Field name="NextBus3_Load" size="2048" source="CrossTab:Header:JSON_Name3:NextBus3.Load:Concat:" type="V_WString" />
+                <Field name="NextBus3_Type" size="2048" source="CrossTab:Header:JSON_Name3:NextBus3.Type:Concat:" type="V_WString" />
+                <Field name="ServiceNo" size="2048" source="CrossTab:Header:JSON_Name3:ServiceNo:Concat:" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+        </Node>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+            <Position x="1484" y="189" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldType>Text</FieldType>
+              <Fields orderChanged="False">
+                <Field name="NextBus_EstimatedArrival" />
+                <Field name="NextBus2_EstimatedArrival" />
+                <Field name="NextBus3_EstimatedArrival" />
+                <Field name="JSON_Name2" selected="False" />
+                <Field name="NextBus_Feature" selected="False" />
+                <Field name="NextBus_Load" selected="False" />
+                <Field name="NextBus_Type" selected="False" />
+                <Field name="NextBus2_Feature" selected="False" />
+                <Field name="NextBus2_Load" selected="False" />
+                <Field name="NextBus2_Type" selected="False" />
+                <Field name="NextBus3_Feature" selected="False" />
+                <Field name="NextBus3_Load" selected="False" />
+                <Field name="NextBus3_Type" selected="False" />
+                <Field name="ServiceNo" selected="False" />
+                <Field name="*Unknown" selected="False" />
+              </Fields>
+              <CopyOutput value="False" />
+              <Expression>DateTimeDiff([_CurrentField_], DateTimeNow(), "Minutes")</Expression>
+              <ChangeFieldType value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>DateTimeDiff([_CurrentField_], DateTimeNow(), "Minutes")</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field description="TextToColumns: Parsed from JSON_Name" name="JSON_Name2" size="1073741823" source="CrossTab:Group:Concat:" type="V_WString" />
+                <Field name="NextBus_EstimatedArrival" size="2048" source="Formula: DateTimeDiff([_CurrentField_], DateTimeNow(), &quot;Minutes&quot;)" type="V_WString" />
+                <Field name="NextBus_Feature" size="2048" source="CrossTab:Header:JSON_Name3:NextBus.Feature:Concat:" type="V_WString" />
+                <Field name="NextBus_Load" size="2048" source="CrossTab:Header:JSON_Name3:NextBus.Load:Concat:" type="V_WString" />
+                <Field name="NextBus_Type" size="2048" source="CrossTab:Header:JSON_Name3:NextBus.Type:Concat:" type="V_WString" />
+                <Field name="NextBus2_EstimatedArrival" size="2048" source="Formula: DateTimeDiff([_CurrentField_], DateTimeNow(), &quot;Minutes&quot;)" type="V_WString" />
+                <Field name="NextBus2_Feature" size="2048" source="CrossTab:Header:JSON_Name3:NextBus2.Feature:Concat:" type="V_WString" />
+                <Field name="NextBus2_Load" size="2048" source="CrossTab:Header:JSON_Name3:NextBus2.Load:Concat:" type="V_WString" />
+                <Field name="NextBus2_Type" size="2048" source="CrossTab:Header:JSON_Name3:NextBus2.Type:Concat:" type="V_WString" />
+                <Field name="NextBus3_EstimatedArrival" size="2048" source="Formula: DateTimeDiff([_CurrentField_], DateTimeNow(), &quot;Minutes&quot;)" type="V_WString" />
+                <Field name="NextBus3_Feature" size="2048" source="CrossTab:Header:JSON_Name3:NextBus3.Feature:Concat:" type="V_WString" />
+                <Field name="NextBus3_Load" size="2048" source="CrossTab:Header:JSON_Name3:NextBus3.Load:Concat:" type="V_WString" />
+                <Field name="NextBus3_Type" size="2048" source="CrossTab:Header:JSON_Name3:NextBus3.Type:Concat:" type="V_WString" />
+                <Field name="ServiceNo" size="2048" source="CrossTab:Header:JSON_Name3:ServiceNo:Concat:" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+        </Node>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1580" y="189" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="JSON_Name2" selected="False" />
+                <SelectField field="ServiceNo" selected="True" type="Int32" size="4" />
+                <SelectField field="NextBus_EstimatedArrival" selected="True" type="Int32" size="4" />
+                <SelectField field="NextBus2_EstimatedArrival" selected="True" type="Int32" size="4" />
+                <SelectField field="NextBus3_EstimatedArrival" selected="True" type="Int32" size="4" />
+                <SelectField field="NextBus_Feature" selected="True" />
+                <SelectField field="NextBus_Load" selected="True" />
+                <SelectField field="NextBus_Type" selected="True" />
+                <SelectField field="NextBus2_Feature" selected="True" />
+                <SelectField field="NextBus2_Load" selected="True" />
+                <SelectField field="NextBus2_Type" selected="True" />
+                <SelectField field="NextBus3_Feature" selected="True" />
+                <SelectField field="NextBus3_Load" selected="True" />
+                <SelectField field="NextBus3_Type" selected="True" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="ServiceNo" source="CrossTab:Header:JSON_Name3:ServiceNo:Concat:" type="Int32" />
+                <Field name="NextBus_EstimatedArrival" source="Formula: DateTimeDiff([_CurrentField_], DateTimeNow(), &quot;Minutes&quot;)" type="Int32" />
+                <Field name="NextBus2_EstimatedArrival" source="Formula: DateTimeDiff([_CurrentField_], DateTimeNow(), &quot;Minutes&quot;)" type="Int32" />
+                <Field name="NextBus3_EstimatedArrival" source="Formula: DateTimeDiff([_CurrentField_], DateTimeNow(), &quot;Minutes&quot;)" type="Int32" />
+                <Field name="NextBus_Feature" size="2048" source="CrossTab:Header:JSON_Name3:NextBus.Feature:Concat:" type="V_WString" />
+                <Field name="NextBus_Load" size="2048" source="CrossTab:Header:JSON_Name3:NextBus.Load:Concat:" type="V_WString" />
+                <Field name="NextBus_Type" size="2048" source="CrossTab:Header:JSON_Name3:NextBus.Type:Concat:" type="V_WString" />
+                <Field name="NextBus2_Feature" size="2048" source="CrossTab:Header:JSON_Name3:NextBus2.Feature:Concat:" type="V_WString" />
+                <Field name="NextBus2_Load" size="2048" source="CrossTab:Header:JSON_Name3:NextBus2.Load:Concat:" type="V_WString" />
+                <Field name="NextBus2_Type" size="2048" source="CrossTab:Header:JSON_Name3:NextBus2.Type:Concat:" type="V_WString" />
+                <Field name="NextBus3_Feature" size="2048" source="CrossTab:Header:JSON_Name3:NextBus3.Feature:Concat:" type="V_WString" />
+                <Field name="NextBus3_Load" size="2048" source="CrossTab:Header:JSON_Name3:NextBus3.Load:Concat:" type="V_WString" />
+                <Field name="NextBus3_Type" size="2048" source="CrossTab:Header:JSON_Name3:NextBus3.Type:Concat:" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="18">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="1652" y="189" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo>
+                <Field field="ServiceNo" order="Ascending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>ServiceNo - Ascending</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="ServiceNo" source="CrossTab:Header:JSON_Name3:ServiceNo:Concat:" type="Int32" />
+                <Field name="NextBus_EstimatedArrival" source="Formula: DateTimeDiff([_CurrentField_], DateTimeNow(), &quot;Minutes&quot;)" type="Int32" />
+                <Field name="NextBus2_EstimatedArrival" source="Formula: DateTimeDiff([_CurrentField_], DateTimeNow(), &quot;Minutes&quot;)" type="Int32" />
+                <Field name="NextBus3_EstimatedArrival" source="Formula: DateTimeDiff([_CurrentField_], DateTimeNow(), &quot;Minutes&quot;)" type="Int32" />
+                <Field name="NextBus_Feature" size="2048" source="CrossTab:Header:JSON_Name3:NextBus.Feature:Concat:" type="V_WString" />
+                <Field name="NextBus_Load" size="2048" source="CrossTab:Header:JSON_Name3:NextBus.Load:Concat:" type="V_WString" />
+                <Field name="NextBus_Type" size="2048" source="CrossTab:Header:JSON_Name3:NextBus.Type:Concat:" type="V_WString" />
+                <Field name="NextBus2_Feature" size="2048" source="CrossTab:Header:JSON_Name3:NextBus2.Feature:Concat:" type="V_WString" />
+                <Field name="NextBus2_Load" size="2048" source="CrossTab:Header:JSON_Name3:NextBus2.Load:Concat:" type="V_WString" />
+                <Field name="NextBus2_Type" size="2048" source="CrossTab:Header:JSON_Name3:NextBus2.Type:Concat:" type="V_WString" />
+                <Field name="NextBus3_Feature" size="2048" source="CrossTab:Header:JSON_Name3:NextBus3.Feature:Concat:" type="V_WString" />
+                <Field name="NextBus3_Load" size="2048" source="CrossTab:Header:JSON_Name3:NextBus3.Load:Concat:" type="V_WString" />
+                <Field name="NextBus3_Type" size="2048" source="CrossTab:Header:JSON_Name3:NextBus3.Type:Concat:" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1771" y="187" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="25">bus_data.xlsx|||Sheet1</File>
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <PreserveFormat>False</PreserveFormat>
+                <SkipFieldNames>False</SkipFieldNames>
+                <OutputOption>RemoveFile</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>bus_data.xlsx
+Query=Sheet1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54" y="54" width="588" height="231" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Data Preparation</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="1">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="331" y="199" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="BusStop" />
+                <Field name="URL" />
+                <Field name="User-Agent" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>12101</c>
+                  <c>http://datamall2.mytransport.sg/ltaodataservice/BusArrivalv2</c>
+                  <c>Mozilla</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="BusStop" source="TextInput:" type="Int32" />
+                <Field name="URL" size="2147483647" source="TextInput:" type="V_String" />
+                <Field name="User-Agent" size="2147483647" source="TextInput:" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="511" y="139" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[URL] + &quot;?BusStopCode=&quot; + ToString([BusStop])" field="URL" size="2147483647" type="V_String" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[URL = [URL] + "?BusStopCode=" + ToString([BusStop])
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="BusStop" source="TextInput:" type="Int32" />
+                <Field name="URL" size="2147483647" source="Formula: [URL] + &quot;?BusStopCode=&quot; + ToString([BusStop])" type="V_String" />
+                <Field name="User-Agent" size="2147483647" source="TextInput:" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="427" y="139" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Bus Stop" selected="False" type="V_String" size="11" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="BusStop" source="TextInput:" type="Int32" />
+                <Field name="URL" size="2147483647" source="TextInput:" type="V_String" />
+                <Field name="User-Agent" size="2147483647" source="TextInput:" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.QuestionTextBox">
+            <Position x="80" y="103" width="59" height="59" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Text Box (21)</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="22">
+          <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+            <Position x="79" y="175" width="59" height="59" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Update Value</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="691" y="91" width="491" height="265" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>API Calls</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1052" y="165" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>Contains([JSON_Name], 'ServiceNo') OR
+Contains([JSON_Name], 'EstimatedArrival') OR
+Contains([JSON_Name], 'Load') OR
+Contains([JSON_Name], 'Feature') OR
+Contains([JSON_Name], 'Type')</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Contains([JSON_Name], 'ServiceNo') OR
+Contains([JSON_Name], 'EstimatedArrival') ...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="BusStop" source="TextInput:" type="Int32" />
+                <Field name="JSON_Name" size="1073741823" source="JSON_Parse" type="V_WString" />
+                <Field name="JSON_ValueString" size="1073741823" source="JSON_Parse" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="BusStop" source="TextInput:" type="Int32" />
+                <Field name="JSON_Name" size="1073741823" source="JSON_Parse" type="V_WString" />
+                <Field name="JSON_ValueString" size="1073741823" source="JSON_Parse" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.JSONParse.JSONParse">
+            <Position x="788" y="165" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <JSON_Field>DownloadData</JSON_Field>
+              <IncludeInOutput value="False" />
+              <SingleField value="True" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="BusStop" source="TextInput:" type="Int32" />
+                <Field name="URL" size="2147483647" source="Formula: [URL] + &quot;?BusStopCode=&quot; + ToString([BusStop])" type="V_String" />
+                <Field name="User-Agent" size="2147483647" source="TextInput:" type="V_String" />
+                <Field name="DownloadHeaders" size="2147483647" source="Download" type="V_String" />
+                <Field name="JSON_Name" size="1073741823" source="JSON_Parse" type="V_WString" />
+                <Field name="JSON_ValueString" size="1073741823" source="JSON_Parse" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJSONParse" />
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings>
+            <Position x="968" y="165" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Check Box (135)">False</Value>
+              <Value name="Check Box (136)">False</Value>
+              <Value name="List Box (11)">""</Value>
+              <Value name="Check Box (84)">True</Value>
+              <Value name="Check Box (117)">True</Value>
+              <Value name="Check Box (15)">True</Value>
+              <Value name="Check Box (109)">True</Value>
+              <Value name="Check Box (122)">True</Value>
+              <Value name="Check Box (53)">False</Value>
+              <Value name="Check Box (58)">False</Value>
+              <Value name="Check Box (70)">False</Value>
+              <Value name="Check Box (77)">False</Value>
+              <Value name="Drop Down (81)">upper</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output26">
+              <RecordInfo>
+                <Field name="BusStop" source="TextInput:" type="Int32" />
+                <Field name="JSON_Name" size="1073741823" source="JSON_Parse" type="V_WString" />
+                <Field name="JSON_ValueString" size="1073741823" source="JSON_Parse" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings Macro="Cleanse.yxmc" />
+        </Node>
+        <Node ToolID="2">
+          <GuiSettings Plugin="AlteryxConnectorGui.Download.Download">
+            <Position x="716" y="140" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <URLField>URL</URLField>
+              <OutputMode>String</OutputMode>
+              <CodePage>65001</CodePage>
+              <EncodeURLs value="True" />
+              <Headers>
+                <NameValues>
+                  <Item name="AccountKey" value="twHTiyI+QXyt5xWKbSsw1w==" />
+                </NameValues>
+                <Fields orderChanged="False">
+                  <Field name="BusStop" />
+                  <Field name="User-Agent" />
+                  <Field name="*Unknown" />
+                  <Field name="URL" selected="False" />
+                  <Field name="Bus Stop" selected="False" />
+                </Fields>
+              </Headers>
+              <Payload>
+                <HTTPAction>GET</HTTPAction>
+                <QueryStringBodyMode>Compose</QueryStringBodyMode>
+                <ComposeNameValues />
+                <ComposeFields orderChanged="False">
+                  <Field name="BusStop" selected="False" />
+                  <Field name="URL" selected="False" />
+                  <Field name="User-Agent" selected="False" />
+                  <Field name="Bus Stop" selected="False" />
+                  <Field name="*Unknown" selected="False" />
+                </ComposeFields>
+              </Payload>
+              <numConnections>2</numConnections>
+              <Timeout>600</Timeout>
+              <EnableRPM value="False" />
+              <DcmAdvancedAuth value="False" />
+              <Password />
+              <UserName />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="BusStop" source="TextInput:" type="Int32" />
+                <Field name="URL" size="2147483647" source="Formula: [URL] + &quot;?BusStopCode=&quot; + ToString([BusStop])" type="V_String" />
+                <Field name="User-Agent" size="2147483647" source="TextInput:" type="V_String" />
+                <Field name="DownloadData" size="1073741823" source="Download" type="V_WString" />
+                <Field name="DownloadHeaders" size="2147483647" source="Download" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxConnectorEngine.dll" EngineDllEntryPoint="AlteryxDownload" />
+        </Node>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="884" y="165" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="URL" selected="False" />
+                <SelectField field="User-Agent" selected="False" />
+                <SelectField field="DownloadHeaders" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="BusStop" source="TextInput:" type="Int32" />
+                <Field name="JSON_Name" size="1073741823" source="JSON_Parse" type="V_WString" />
+                <Field name="JSON_ValueString" size="1073741823" source="JSON_Parse" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="21" Connection="Question" />
+      <Destination ToolID="22" Connection="Question" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="22" Connection="Action" />
+      <Destination ToolID="1" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="True" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output26" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="9" Connection="Input2" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Text Box (21)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>S10223486G_Ambrish Krishna Muralitharan_DDP_ASG2</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="fbfc0a49-518e-4f41-8972-33ba68118ed1" />
+      <Telemetry>
+        <PreviousWorkflowId value="c1b125ed-501f-471c-880e-ea2971d9cfc2" />
+        <OriginWorkflowId value="312396a8-cfda-474d-a5fe-82c1774191e9" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <RuntimeProperties>
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="22" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>1/Data/r[1]/c[1]</Destination>
+              <Mapping>Update Cell</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration>row	1
+column	1</DynamicConfiguration>
+              <DefaultConfiguration value="True" />
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (20)</Name>
+          <ToolId value="20" />
+          <Questions>
+            <Question>
+              <Type>TextBox</Type>
+              <Description>Which bus stop?</Description>
+              <Name>Text Box (21)</Name>
+              <ToolId value="21" />
+              <Default />
+              <Password value="False" />
+              <Multiline value="False" />
+              <Hidden value="False" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Wizard</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="0" />
+      <MacroInputs />
+      <MacroOutputs />
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="19" Selected="True" />
+        <Tool ToolId="9" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
